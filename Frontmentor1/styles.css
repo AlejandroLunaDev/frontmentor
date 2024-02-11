@@ -1,0 +1,158 @@
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap&&https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color-scheme: dark;
+    }
+
+    body {
+    background-color: hsl(257, 40%, 49%);
+    height: 100vh;
+    background-image: url(./images/bg-desktop.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    @media (width <= 375px) {
+        background-image: url(./images/bg-mobile.svg);
+    }
+    }
+
+    main {
+    & .logo {
+        padding: 60px 150px;
+        @media (width <= 375px) {
+            padding: 20px 60px ;
+            margin-bottom: 40px;
+            
+        }
+        & img {
+        height: 50px;
+        @media (width <= 375px) {
+            height:30px;
+            
+        }
+        }
+    }
+
+    & .principal {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 55px;
+
+        @media (width <= 375px) {
+        display: block;
+        text-align: center;
+        }
+
+        & .texto {
+        width: 32%;
+        @media (width <= 375px) {
+           width: 100%;
+           margin-top: 30px;
+            
+        }
+        }
+        & h1 {
+        font-family: "Open Sans", sans-serif;
+        font-size: 30px;
+        text-transform: capitalize;
+        margin-bottom: 30px;
+        word-spacing: 3px;
+        line-height: 2.5rem;
+        @media (width <= 375px) {
+            font-size: 20px;
+            line-height: 2rem;
+            margin-bottom: 15px;
+            
+        }
+        }
+
+        & p {
+        font-family: "Poppins", sans-serif;
+        margin-bottom: 30px;
+        font-weight: 400;
+        @media (width <= 375px) {
+            font-size: 12px ;
+            padding: 0 40px;
+            
+        }
+        }
+
+        & a {
+        background-color: #fff;
+        border-radius: 20px;
+        padding: 15px 60px;
+        font-size: 18px;
+        text-decoration: none;
+        box-shadow: 6px 6px 21px -10px rgba(0, 0, 0, 0.75);
+
+        @media (width <= 375px) {
+            padding: 8px 70px;
+            
+        }
+        }
+
+        & article {
+        & img {
+            height: 30em;
+            @media (width <= 375px) {
+                height: 10rem;
+                
+            }
+        }
+        }
+    }
+    }
+
+    footer {
+    /* margin-top: 30px; */
+    display: flex;
+    justify-content: end;
+    margin-right: 6rem;
+    @media (width <= 375px) {
+        justify-content: center;
+        margin-right: 0;
+        margin-top: 75px;
+        
+    }
+    & section {
+        display: flex;
+        gap: 10px;
+
+        & div {
+        border-radius: 50%;
+        border: 1px solid #ffff;
+        padding: 10px;
+  
+        @media (width <= 375px) {
+           padding: 5px;
+            
+        }
+        &:hover {
+            border-color:hsl(300, 69%, 71%) ;
+        }
+        & svg {
+            background: dark;
+            :hover {
+                fill: hsl(300, 69%, 71%);
+               
+            }
+        }
+        & img {
+            height: 25px;
+          
+            @media (width <= 375px) {
+                height: 12px;
+
+        
+            } 
+        
+        }
+        }
+    }
+    }
+
+    

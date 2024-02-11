@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color-scheme: dark;
+    font-family: "Rubik", sans-serif;
+}
+
+:root {
+    --color-primary:hsl(246, 80%, 60%);
+    --color-secundary:hsl(15, 100%, 70%);
+    --color-tertiary:hsl(195, 74%, 62%);
+    --color-quaternary:hsl(348, 100%, 68%);
+    --color-quinary: hsl(145, 58%, 55%);
+    --color-senary: hsl(264, 64%, 52%);
+    --color-septenary:hsl(43, 84%, 65%);
+    /* --color-octonary: */
+
+}
+
+body {
+    background:hsl(226, 43%, 10%);
+
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+section {
+    height: 280px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas: 
+    'primary card-1 card-2 card-3'
+    'primary card-4 card-5 card-6';
+    gap: 10px;
+    @media (width < 605px){
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        'primary '
+        'card-1'
+        'card-2'
+        'card-3'
+        'card-4'
+        'card-5'
+        'card-6';
+        gap: 10px;
+    }
+}
+
+.header{
+    border-radius: 10px;
+    z-index: 0;
+    overflow-y: hidden;
+    display: flex;
+    justify-content: end;
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    top: -3px;
+    & img {
+        height: 40px;
+    }
+}
+
+article {
+    position: relative;
+    width: 140px;
+    height: 110px;
+    
+}
+
+.card-body{
+    margin-top: 5px;
+    background: hsl(235, 46%, 20%);
+    border-radius: 10px;
+    z-index: 9999;
+    height: 100%;
+    position: relative;
+    margin-top: 20px;
+    padding: 10px;
+    @media (width < 605px){
+        height: 60%;
+    }
+
+    &:focus {
+        background-color: rgb(51, 69, 118);
+    }
+
+    & div {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+    }
+
+    & .body-1{
+        flex-direction: column;
+        @media (width < 605px){
+            flex-direction:row;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+    }
+
+    & h3 {
+        font-size: 25px;
+        font-weight:100;
+        margin-bottom: 5px;
+        @media (width < 605px){
+            font-size: 16px;
+        }
+    }
+
+    & span {
+        font-size: 10px;
+    }
+
+    & small {
+        font-size: 8px;
+        font-weight: 200;
+        color: #ffffff79
+        ;
+    }
+
+}
+
+
+.card-primary{
+    grid-area: primary;
+    height: 100%;
+    @media (width < 605px){
+    height: 100px;
+
+    }
+    & .header{
+        padding: 10px;
+        background: var(--color-primary);
+        height: 200px;
+        z-index: 999;
+        flex-direction: column;
+        justify-content: center;
+        @media (width < 605px){
+            height: 70px;
+            flex-direction: row;
+            gap: 10px;
+            align-items: center;
+        }
+        & .img-container{
+            background: #fff;
+            border-radius: 50%;
+            height: 43px;
+            width: 43px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            @media (width < 605px){
+                margin-bottom: 0;
+            }
+        }
+        & small {
+            font-size: 8px;
+            color: #ffffff8f;
+            margin-bottom: 10px;
+        }
+        & h2 {
+            font-weight: 300;
+            @media (width < 605px){
+                font-size: 9px;
+            }
+            
+        }
+    }
+}
+
+.card-primary .card-body{
+    height: 34%;
+    top: 10em;
+    z-index: 0;
+    @media (width < 605px){
+        top: 2em;
+        height: 50%;
+    }
+    & ul {
+        @media (width < 605px){
+            display: flex;
+            gap: 10px;
+            justify-content: space-evenly;
+            align-self:center;
+        }
+
+        & a{
+            text-decoration: none;
+            font-size: 8px;
+
+            &:focus {
+                color: #fff;
+                
+            }
+        }
+        margin-top: 10px;
+        list-style: none;
+    }
+}
+.card-secondary{
+    grid-area: card-1;
+    & .header{
+        background: var(--color-secundary);
+      
+    }
+    @media (width < 605px){
+        margin-top: 5px;
+    }
+}
+.card-tertiary{
+    grid-area: card-2;
+    & .header{
+        background: var(--color-tertiary);
+      
+    }
+}
+.card-quaternary{
+    grid-area: card-3;
+    & .header{
+        background: var(--color-quaternary);
+     
+    }
+}
+.card-quinary{
+    grid-area: card-4;
+    & .header{
+        background: var(--color-quinary);
+      
+    }
+}
+.card-senary{
+    grid-area: card-5;
+    & .header{
+        background: var(--color-senary);
+      
+    }
+}
+.card-septenary{
+    grid-area: card-6;
+    & .header{
+        background: var(--color-septenary);
+
+    }
+}
+
+#daily:focus {
+    outline: none;
+}
